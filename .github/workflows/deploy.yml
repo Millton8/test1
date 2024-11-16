@@ -21,7 +21,6 @@ jobs:
     - name: Deploy to Server
       run: |
         ssh -o StrictHostKeyChecking=no root@31.28.27.101 "
-          cd /var/www/my-app && \
-          docker build -f ../../Dockerfile -t my-app:latest . && \
+          docker build -t my-app:latest . && \
           docker run -d --name cicd -p 80:80 my-app:latest
         "
