@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5+/qpMJL3F/NJDJyD5QPwU2jD7UVjMLqJD0gjjXxiL12GF6Ji3cjVaLSw4xXq5wygJQ1Dn8yPd1AW84zqjdboA==",
+  "dgSpecHash": "8TnKGBuSmt0dENKP3Y7RsfnbKxlWSbRpIwnLAbmOdbztktZ2+xf0IusUBKRaGu1k53xCkynSFxS3BeD71vxpVg==",
   "success": true,
   "projectFilePath": "E:\\Docs\\proga\\cicd\\cicd.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\MilkoO\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "cicd": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
