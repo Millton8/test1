@@ -20,4 +20,4 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        ssh your-server "docker-compose -f /path/to/docker-compose.yml pull && docker-compose -f /path/to/docker-compose.yml up -d"
+        ssh 31.28.27.101 "docker-compose -f /path/to/docker-compose.yml pull && docker-compose -f /path/to/docker-compose.yml up -d"
