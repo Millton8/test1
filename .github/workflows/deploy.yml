@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main # Запускать при пуше в ветку main
+      - main
 
 jobs:
   deploy:
@@ -20,10 +20,15 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        ssh -o StrictHostKeyChecking=no root@31.28.27.101 "
-        cd /var/www/my-app && \
-        git checkout main && \
-        git pull && \
-        docker build -f /var/www/Dockerfile -t my-app:latest . && \
+        ssh -o StrictHostKeyChecking=no root@31.28.27.101 << 'EOF'
+        mkdir -p /var/www/my-app
+        cd /var/www/my-app
+        git init
+        git remote add origin git@github.com:Millton8/test1.git || true
+        git checkout main
+        git pull origin main
+        docker build -f Dockerfile -t my-app:latest .
+        docker stop cicd || true
+        docker rm cicd || true
         docker run -d --name cicd -p 80:80 my-app:latest
-        "
+        EOF
